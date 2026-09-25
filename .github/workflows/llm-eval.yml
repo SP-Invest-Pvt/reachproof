@@ -21,7 +21,8 @@ jobs:
     timeout-minutes: 120
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      MODEL: ${{ inputs.model || vars.GEMINI_MODEL }}
+      # gemini-2.5-flash (the code default) is closed to new API users; pin a current flash model.
+      MODEL: ${{ inputs.model || vars.GEMINI_MODEL || 'gemini-3.8-flash' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -44,7 +45,7 @@ jobs:
             echo "GEMINI_API_KEY is not set: skipping the LLM evaluation." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          echo "Model: ${MODEL:-project default}"
+          echo "Model: $MODEL"
           LLM=gemini ./scripts/run_all.sh
       - name: Save LLM response cache
         if: always() && env.GEMINI_API_KEY != ''
