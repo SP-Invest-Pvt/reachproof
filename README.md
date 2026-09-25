@@ -2,7 +2,7 @@
 
 Evidence-backed EU Cyber Resilience Act Article 14 decisions: is a known-exploited vulnerability actually reachable in your product, and can you prove it?
 
-[![tests](https://github.com/SP-Invest-Pvt/reachproof/actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml)
+[![tests](https://github.com/SP-Invest-Pvt/reachproof/actions/workflows/ci.yml/badge.svg)](../../actions/workflows/ci.yml) [![codeql](https://github.com/SP-Invest-Pvt/reachproof/actions/workflows/codeql.yml/badge.svg)](../../actions/workflows/codeql.yml)
 
 ## The problem
 
