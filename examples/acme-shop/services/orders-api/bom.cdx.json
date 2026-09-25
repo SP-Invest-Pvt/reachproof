@@ -1,0 +1,81 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:46d03601-3f6e-5f95-8b40-061836fb3084",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-22T09:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.9.1"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "group": "com.acme",
+      "name": "orders-api",
+      "version": "4.2.0",
+      "purl": "pkg:maven/com.acme/orders-api@4.2.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-starter-web@2.6.5",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-web",
+      "version": "2.6.5",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web@2.6.5",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-webmvc@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-webmvc",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-webmvc@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-beans@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-beans",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-beans@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@9.0.30",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-core",
+      "version": "9.0.30",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@9.0.30",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.yaml/snakeyaml@1.29",
+      "group": "org.yaml",
+      "name": "snakeyaml",
+      "version": "1.29",
+      "purl": "pkg:maven/org.yaml/snakeyaml@1.29",
+      "scope": "required"
+    }
+  ]
+}

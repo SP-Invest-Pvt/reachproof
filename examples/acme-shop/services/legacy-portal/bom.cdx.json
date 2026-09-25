@@ -1,0 +1,72 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3c0c4a1e-2df7-5231-b8bc-cb61be426ab0",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-22T09:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.9.1"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "group": "com.acme",
+      "name": "legacy-portal",
+      "version": "4.2.0",
+      "purl": "pkg:maven/com.acme/legacy-portal@4.2.0"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-webmvc@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-webmvc",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-webmvc@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-beans@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-beans",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-beans@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-core@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-core",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-core@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.springframework/spring-web@5.3.17",
+      "group": "org.springframework",
+      "name": "spring-web",
+      "version": "5.3.17",
+      "purl": "pkg:maven/org.springframework/spring-web@5.3.17",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/com.google.guava/guava@31.1-jre",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "31.1-jre",
+      "purl": "pkg:maven/com.google.guava/guava@31.1-jre",
+      "scope": "required"
+    }
+  ]
+}

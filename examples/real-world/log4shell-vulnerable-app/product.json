@@ -1,0 +1,14 @@
+{
+  "product": "log4shell-vulnerable-app (public test app by christophetd)",
+  "version": "c962aab",
+  "manufacturer": "Public GitHub project, used as an external test case",
+  "psirt_contact": "",
+  "eu_member_states": [],
+  "services": [
+    {
+      "name": "vulnerableapp",
+      "sbom": "bom.cdx.json",
+      "source": "src"
+    }
+  ]
+}

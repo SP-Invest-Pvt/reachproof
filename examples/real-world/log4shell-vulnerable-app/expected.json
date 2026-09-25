@@ -1,0 +1,14 @@
+{
+  "_about": "Independent check on third-party code: https://github.com/christophetd/log4shell-vulnerable-app at c962aab. The app logs the X-Api-Version header with Log4j 2.14.1, runs as a Spring Boot jar on a Java 8 image, and never writes to the Thread Context.",
+  "vulnerableapp|CVE-2021-44228": {
+    "status": "affected"
+  },
+  "vulnerableapp|CVE-2021-45046": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+  },
+  "vulnerableapp|CVE-2022-22965": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path"
+  }
+}

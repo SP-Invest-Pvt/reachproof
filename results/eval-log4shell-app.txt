@@ -1,0 +1,6 @@
+case                               expected       engine             llm                 
+vulnerableapp|CVE-2021-44228       affected       affected       ok  -              
+vulnerableapp|CVE-2021-45046       not_affected   not_affected   ok  -              
+vulnerableapp|CVE-2022-22965       not_affected   not_affected   ok  -              
+
+Engine: 3/3 correct (status and VEX justification)

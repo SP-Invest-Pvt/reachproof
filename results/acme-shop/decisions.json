@@ -1,0 +1,19 @@
+{
+  "notify-worker|CVE-2021-44228": {
+    "status": "affected",
+    "justification": "",
+    "by": "Demo Reviewer",
+    "at": "2026-09-24T11:15:52+00:00",
+    "note": "User-Agent header reaches log.info at WebhookController.java:27.",
+    "rationale": "User-Agent header reaches log.info at WebhookController.java:27.",
+    "aware_at": "2026-09-24T11:15:52+00:00"
+  },
+  "billing-batch|CVE-2023-46604": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path",
+    "by": "Demo Reviewer",
+    "at": "2026-09-24T11:15:52+00:00",
+    "note": "activemq-client is never imported; removal ticket raised.",
+    "rationale": "activemq-client is never imported; removal ticket raised."
+  }
+}

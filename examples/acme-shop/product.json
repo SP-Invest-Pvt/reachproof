@@ -1,0 +1,34 @@
+{
+  "product": "Acme Shop Platform",
+  "version": "4.2.0",
+  "manufacturer": "Acme Retail Systems Ltd (fictional demo)",
+  "psirt_contact": "psirt@acme.example",
+  "eu_member_states": [
+    "DE",
+    "FR",
+    "NL",
+    "IE"
+  ],
+  "services": [
+    {
+      "name": "notify-worker",
+      "sbom": "services/notify-worker/bom.cdx.json",
+      "source": "services/notify-worker"
+    },
+    {
+      "name": "billing-batch",
+      "sbom": "services/billing-batch/bom.cdx.json",
+      "source": "services/billing-batch"
+    },
+    {
+      "name": "legacy-portal",
+      "sbom": "services/legacy-portal/bom.cdx.json",
+      "source": "services/legacy-portal"
+    },
+    {
+      "name": "orders-api",
+      "sbom": "services/orders-api/bom.cdx.json",
+      "source": "services/orders-api"
+    }
+  ]
+}

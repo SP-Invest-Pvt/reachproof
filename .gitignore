@@ -1,0 +1,9 @@
+out/
+.cache/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+examples/real-world/log4shell-vulnerable-app/src/
+data/
+work/

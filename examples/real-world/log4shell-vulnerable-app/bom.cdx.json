@@ -1,0 +1,111 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-23T00:00:00Z",
+    "component": {
+      "type": "application",
+      "group": "fr.christophetd.log4shell",
+      "name": "vulnerableapp",
+      "version": "0.0.1-SNAPSHOT",
+      "purl": "pkg:maven/fr.christophetd.log4shell/vulnerableapp@0.0.1-SNAPSHOT"
+    },
+    "properties": [
+      {
+        "name": "reachproof:note",
+        "value": "Runtime dependencies as resolved by Spring Boot 2.6.1 dependency management for build.gradle at commit c962aab. Regenerate with the CycloneDX Gradle plugin for a tool-produced SBOM."
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-web",
+      "version": "2.6.1",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web@2.6.1",
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-starter-web@2.6.1"
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-log4j2",
+      "version": "2.6.1",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-log4j2@2.6.1",
+      "bom-ref": "pkg:maven/org.springframework.boot/spring-boot-starter-log4j2@2.6.1"
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-webmvc",
+      "version": "5.3.13",
+      "purl": "pkg:maven/org.springframework/spring-webmvc@5.3.13",
+      "bom-ref": "pkg:maven/org.springframework/spring-webmvc@5.3.13"
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-beans",
+      "version": "5.3.13",
+      "purl": "pkg:maven/org.springframework/spring-beans@5.3.13",
+      "bom-ref": "pkg:maven/org.springframework/spring-beans@5.3.13"
+    },
+    {
+      "type": "library",
+      "group": "org.springframework",
+      "name": "spring-core",
+      "version": "5.3.13",
+      "purl": "pkg:maven/org.springframework/spring-core@5.3.13",
+      "bom-ref": "pkg:maven/org.springframework/spring-core@5.3.13"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.tomcat.embed",
+      "name": "tomcat-embed-core",
+      "version": "9.0.55",
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@9.0.55",
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@9.0.55"
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "2.13.0",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.13.0"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-core",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-api",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.1",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.14.1"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-slf4j-impl",
+      "version": "2.14.1",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-slf4j-impl@2.14.1",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-slf4j-impl@2.14.1"
+    },
+    {
+      "type": "library",
+      "group": "org.yaml",
+      "name": "snakeyaml",
+      "version": "1.29",
+      "purl": "pkg:maven/org.yaml/snakeyaml@1.29",
+      "bom-ref": "pkg:maven/org.yaml/snakeyaml@1.29"
+    }
+  ]
+}

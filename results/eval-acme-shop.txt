@@ -1,0 +1,11 @@
+case                               expected       engine             llm                 
+billing-batch|CVE-2021-44228       not_affected   not_affected   ok  -              
+billing-batch|CVE-2021-45046       not_affected   not_affected   ok  -              
+billing-batch|CVE-2023-46604       not_affected   not_affected   ok  -              
+legacy-portal|CVE-2022-22965       affected       affected       ok  -              
+notify-worker|CVE-2021-44228       affected       affected       ok  -              
+notify-worker|CVE-2021-45046       not_affected   not_affected   ok  -              
+orders-api|CVE-2020-1938           not_affected   not_affected   ok  -              
+orders-api|CVE-2022-22965          not_affected   not_affected   ok  -              
+
+Engine: 8/8 correct (status and VEX justification)

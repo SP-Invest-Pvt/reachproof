@@ -1,0 +1,193 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "urn:reachproof:acme-shop-platform:2026-09-24T11:15:52+00:00",
+  "author": "psirt@acme.example",
+  "timestamp": "2026-09-24T11:15:52+00:00",
+  "version": 1,
+  "tooling": "reachproof",
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2021-44228",
+        "aliases": [
+          "GHSA-jfh8-c2jp-5v3q"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/notify-worker@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Upgrade log4j-core to 2.17.1 or later (2.12.4 / 2.3.2 for Java 7 / 6).",
+      "status_notes": "Reviewed by Demo Reviewer at 2026-09-24T11:15:52+00:00"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-22965",
+        "aliases": [
+          "GHSA-36p3-wjmg-h94x"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/legacy-portal@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.springframework/spring-webmvc@5.3.17"
+            },
+            {
+              "@id": "pkg:maven/org.springframework/spring-beans@5.3.17"
+            }
+          ]
+        }
+      ],
+      "status": "affected",
+      "action_statement": "Upgrade to Spring Framework 5.3.18 / 5.2.20 or later (Spring Boot 2.6.6 / 2.5.12).",
+      "status_notes": "DRAFT: engine decision pending human review"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-44228",
+        "aliases": [
+          "GHSA-jfh8-c2jp-5v3q"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/billing-batch@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "No path from untrusted input to the vulnerable behaviour was found. This rests on a heuristic data-flow check, so it needs a reviewer's confirmation. If any logged value can come from outside the service (headers, message payloads, database rows written by users), treat the component as affected.",
+      "status_notes": "DRAFT: engine decision pending human review"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-45046",
+        "aliases": [
+          "GHSA-7rjr-3q55-vv33"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/billing-batch@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "No path from untrusted input to the vulnerable behaviour was found. This rests on a heuristic data-flow check, so it needs a reviewer's confirmation. Exploitation also needs a non-default layout that references Thread Context data (for example ${ctx:...}); check log4j2.xml before closing.",
+      "status_notes": "DRAFT: engine decision pending human review"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2021-45046",
+        "aliases": [
+          "GHSA-7rjr-3q55-vv33"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/notify-worker@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "No path from untrusted input to the vulnerable behaviour was found. This rests on a heuristic data-flow check, so it needs a reviewer's confirmation. Exploitation also needs a non-default layout that references Thread Context data (for example ${ctx:...}); check log4j2.xml before closing.",
+      "status_notes": "DRAFT: engine decision pending human review"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-46604",
+        "aliases": [
+          "GHSA-crg9-44h2-xw35"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/billing-batch@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.activemq/activemq-client@5.15.15"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "activemq-client is never imported; removal ticket raised.",
+      "status_notes": "Reviewed by Demo Reviewer at 2026-09-24T11:15:52+00:00"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2020-1938",
+        "aliases": [
+          "GHSA-c9hw-wf7x-jp9j"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/orders-api@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@9.0.30"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Exploit prerequisites not met: An AJP connector is configured is not true here (no match in 8 service files). Spring Boot's embedded Tomcat does not open an AJP connector unless code or configuration adds one.",
+      "status_notes": "DRAFT: engine decision pending human review"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-22965",
+        "aliases": [
+          "GHSA-36p3-wjmg-h94x"
+        ]
+      },
+      "products": [
+        {
+          "@id": "pkg:maven/com.acme/orders-api@4.2.0",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/org.springframework.boot/spring-boot-starter-web@2.6.5"
+            },
+            {
+              "@id": "pkg:maven/org.springframework/spring-webmvc@5.3.17"
+            },
+            {
+              "@id": "pkg:maven/org.springframework/spring-beans@5.3.17"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "Exploit prerequisites not met: Packaged as a WAR is not true here (packaging = jar). The Spring team states the known exploit needs a WAR on Tomcat but the underlying flaw is more general. A not_affected decision here covers the known exploit path only; schedule the upgrade regardless.",
+      "status_notes": "DRAFT: engine decision pending human review"
+    }
+  ]
+}

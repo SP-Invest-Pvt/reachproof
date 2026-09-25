@@ -1,0 +1,33 @@
+{
+  "_about": "Ground truth for the demo, fixed by how each service was written. Keys are service|CVE.",
+  "notify-worker|CVE-2021-44228": {
+    "status": "affected"
+  },
+  "notify-worker|CVE-2021-45046": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+  },
+  "billing-batch|CVE-2021-44228": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+  },
+  "billing-batch|CVE-2021-45046": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_cannot_be_controlled_by_adversary"
+  },
+  "billing-batch|CVE-2023-46604": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path"
+  },
+  "legacy-portal|CVE-2022-22965": {
+    "status": "affected"
+  },
+  "orders-api|CVE-2022-22965": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path"
+  },
+  "orders-api|CVE-2020-1938": {
+    "status": "not_affected",
+    "justification": "vulnerable_code_not_in_execute_path"
+  }
+}
