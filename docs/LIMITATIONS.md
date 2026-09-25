@@ -6,4 +6,5 @@
 * **KEV is a floor.** A vulnerability can be exploited before CISA lists it, and KEV favours enterprise products. Article 14 turns on exploitation you become aware of by any means; add threat-intel feeds or ENISA's EUVD as they become available.
 * **Demo ground truth is by construction.** The acme-shop services were written to exercise each branch. The external test case is independent code, but one app is not a benchmark. Measure on your own services before relying on the buckets.
 * **The real-world SBOM is reconstructed.** Its components are the versions Spring Boot 2.6.1 manages for that build file; a tool-generated SBOM is preferable.
+* **The LLM evaluation is small.** The published Gemini run covers 11 cases, all well-known CVEs that the model has likely seen in training. Full agreement there says nothing about novel advisories. Results depend on the model; free-tier Gemini models change and get retired, so pin `MODEL` and re-run before quoting numbers.
 * **Not legal advice.** Drafts are prompts for the people who own the filing.

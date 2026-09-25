@@ -48,6 +48,8 @@ The engine matches the ground truth on 8 of 8 cases, including the VEX justifica
 
 **Third-party code** (`examples/real-world`): [christophetd/log4shell-vulnerable-app](https://github.com/christophetd/log4shell-vulnerable-app) at a pinned commit, code I did not write. 3 of 3 correct: Log4Shell reachable through the `X-Api-Version` header at `MainController.java:18`; CVE-2021-45046 not reachable (no Thread Context writes); Spring4Shell ruled out because the runtime image is Java 8 and the app ships as a jar.
 
+**LLM second opinion** (Gemini `gemini-3.5-flash-lite`, [workflow run](https://github.com/SP-Invest-Pvt/reachproof/actions/runs/36081782135)): the model agreed with the engine on **8 of 8** demo cases and **3 of 3** third-party cases, with no API errors. That means 11 of 11 statuses matched the ground truth as well. This is a small, mostly well-known set of CVEs, so it shows the second opinion is wired up and consistent, not that the model is reliable on unseen vulnerabilities. The engine still makes the decision; the LLM opinion is recorded next to it and any disagreement goes to a person.
+
 Add an LLM second opinion:
 
 ```bash

@@ -38,4 +38,4 @@ Since 11 September 2026, the EU Cyber Resilience Act makes manufacturers report 
 
 * Demo: 24 components, 11 known vulnerabilities, 8 known exploited, 2 report candidates, 3 documented not affected, 3 routed to a person.
 * External app: 3 of 3 correct.
-* Your LLM run: fill in agreement and disagreement counts from `results/eval-*.txt`.
+* Your LLM run (Gemini `gemini-3.5-flash-lite`, [workflow run](https://github.com/SP-Invest-Pvt/reachproof/actions/runs/36081782135)): agreed with the engine on 8/8 demo cases and 3/3 external cases, 0 disagreements. Statuses were 11/11 correct; the LLM gives a status only, while the engine also gets the VEX justification right. Small sample: say so if asked.
