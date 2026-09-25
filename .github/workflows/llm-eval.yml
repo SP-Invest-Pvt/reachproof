@@ -47,6 +47,26 @@ jobs:
           fi
           echo "Model: $MODEL"
           LLM=gemini ./scripts/run_all.sh
+      - name: Fail if any LLM call errored
+        if: env.GEMINI_API_KEY != ''
+        run: |
+          python - <<'PY'
+          import collections, glob, json, sys
+          def errors(o):
+              if isinstance(o, dict):
+                  if o.get("error"): yield o["error"]
+                  for v in o.values(): yield from errors(v)
+              elif isinstance(o, list):
+                  for v in o: yield from errors(v)
+          found = collections.Counter()
+          for f in glob.glob("results/*/assessment.json"):
+              for e in errors(json.load(open(f))): found[e.split(":")[0] + ": " + e.split(":", 2)[-1].strip()[:120]] += 1
+          if found:
+              for msg, n in found.items(): print(f"::error title=LLM call failed ({n}x)::{msg}")
+              print("LLM results are incomplete: the numbers above are not a valid evaluation.")
+              sys.exit(1)
+          print("All LLM calls succeeded.")
+          PY
       - name: Save LLM response cache
         if: always() && env.GEMINI_API_KEY != ''
         uses: actions/cache/save@v6
