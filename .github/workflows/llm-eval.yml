@@ -24,12 +24,12 @@ jobs:
       # Free tier: gemini-2.5-flash is closed to new users and gemini-3.8-flash allows 20 requests/day.
       MODEL: ${{ inputs.model || vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Restore LLM response cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: .cache
           key: llm-cache-${{ github.run_id }}-${{ github.run_attempt }}
@@ -47,15 +47,35 @@ jobs:
           fi
           echo "Model: $MODEL"
           LLM=gemini ./scripts/run_all.sh
+      - name: Fail if any LLM call errored
+        if: env.GEMINI_API_KEY != ''
+        run: |
+          python - <<'PY'
+          import collections, glob, json, sys
+          def errors(o):
+              if isinstance(o, dict):
+                  if o.get("error"): yield o["error"]
+                  for v in o.values(): yield from errors(v)
+              elif isinstance(o, list):
+                  for v in o: yield from errors(v)
+          found = collections.Counter()
+          for f in glob.glob("results/*/assessment.json"):
+              for e in errors(json.load(open(f))): found[e.split(":")[0] + ": " + e.split(":", 2)[-1].strip()[:120]] += 1
+          if found:
+              for msg, n in found.items(): print(f"::error title=LLM call failed ({n}x)::{msg}")
+              print("LLM results are incomplete: the numbers above are not a valid evaluation.")
+              sys.exit(1)
+          print("All LLM calls succeeded.")
+          PY
       - name: Save LLM response cache
         if: always() && env.GEMINI_API_KEY != ''
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: .cache
           key: llm-cache-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Upload results
         if: always() && env.GEMINI_API_KEY != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: llm-eval-results
           path: results/
